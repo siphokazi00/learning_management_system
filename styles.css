@@ -405,6 +405,41 @@ h3 {
     color: gray;
 }
 
+/*--Testimonial--*/
+
+.testimonial{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+}
+.testimonial-col img{
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+.testimonial h3{
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+    font-style: roboto;
+}
+.testimonial p{
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 20px;
+}
 
 /*---Somia ends here ---*/
 
