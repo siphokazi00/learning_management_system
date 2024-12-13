@@ -396,3 +396,30 @@ h3 {
 
 
 /*---Somia ends here ---*/
+
+
+/*    FOOTER  SECTION   */
+
+.footer {
+    display: flex;
+    gap: 24px;
+    padding: 32px;
+    background-color: rgb(222, 240, 240);
+}
+
+.sch {
+    display: block;
+    width: 40rem;
+}
+
+.sch2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sch-courses {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
