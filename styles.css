@@ -9,7 +9,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(#b1b5c980, rgba(4, 9, 30, 0.5)), url("images/willow\ school.jpeg");
+    background-image: linear-gradient(#0b0c1180, rgba(28, 29, 29, 0.5)), url("images/willow\ school.jpeg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -17,31 +17,39 @@
 
 nav {
     display: flex;
-    padding: 2% 6%;
+    padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    position: relative;
 }
 
 nav img {
     width: 150px;
 }
 
-nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+/* .nav-links {
+    display: inline;
+    gap: 15px;
+    justify-content: end;
+    padding-top: 10px;
+
+} */
+
+.nav-links ul{
+font-size: 23px;
+  padding-top: 10px;
+  text-decoration: none;
+  display: inline;
+  float: right;
+
+}
+.nav-links ul li a{
     margin: 0;
 }
 
-nav-links ul li {
-    display: inline-block;
-    list-style: none;
-    padding: 8px 12px;
-    position: relative;
-}
 
-li {
+ li {
     list-style: none;
     padding-left: 10px;
     display: inline-block;
@@ -50,16 +58,17 @@ li {
 li a {
     color: rgb(217, 156, 43);
     font-size: 20px;
-    font-weight: bold;
+    font-weight:300;
     margin-right: 25px;
-}
+} 
 
 button {
     background-color: rgb(29, 226, 226);
     margin-left: 20px;
     border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 button a {
@@ -68,17 +77,17 @@ button a {
     font-size: 15px;
 }
 
-nav-links ul li::after {
+.nav-links ul li::after {
     content: "";
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #0f0e0e;
     display: block;
     margin: auto;
     transition: 0.5s;
 }
 
-nav-links ul li:hover::after {
+.nav-links ul li:hover::after {
     width: 100%;
     transition: 0.5s;
 }
@@ -91,7 +100,7 @@ nav-links ul li:hover::after {
 
 .text-box {
     width: 90%;
-    color: white;
+    color: rgb(255, 255, 255);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -100,19 +109,20 @@ nav-links ul li:hover::after {
 }
 
 .text-box h1 {
-    font-size: 62px;
+    font-size: 54px;
+    color: #4db229;
 }
 
 .text-box p {
-    margin: 10px 0 40px;
+    margin: 10px 0 50px;
     font-size: 15px;
-    color: white;
+    color: rgb(227, 215, 215);
+    font-weight: 300;
 }
 
 .hero-btn {
     display: inline-block;
     text-decoration: none;
-    color: white;
     border: 1px solid white;
     padding: 12px 34px;
     font-size: 13px;
@@ -248,6 +258,7 @@ h3 {
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(44, 29, 29, 0.1);
 }
 
 .layer {
@@ -394,5 +405,38 @@ h3 {
     color: gray;
 }
 
+/*---testimonials---*/
 
-/*---Somia ends here ---*/
+.testimonial{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+}
+.testimonial-col img{
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+.testimonial h3{
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+    font-style: roboto;
+}
+.testimonial p{
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 20px;
+}
