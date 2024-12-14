@@ -98,24 +98,63 @@ nav-links ul li:hover::after {
 
 .footer {
     display: flex;
-    gap: 24px;
+    justify-content: space-between;
     padding: 32px;
     background-color: rgb(222, 240, 240);
+    ul li {
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        width: 300px;
+    }
+    h3 {
+        display: flex;
+        margin: 10px;
+        text-align: center;
+    }
 }
 
 .sch {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 40rem;
+    gap: 10px;
 }
 
 .sch2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
 }
 
 .sch-courses {
     display: flex;
     flex-direction: column;
     align-content: center;
+    margin: 16px 32px;
+    width: 300px;
+    height: 100px;
+}
+
+.portal-links {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 12px 24px;
+    width: 180px;
+    height: 100px;
+    ul li a {
+        text-decoration: none;
+    }
+}
+
+.support-level {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 10px 20px;
+    width: 180px;
+    height: 100px
 }

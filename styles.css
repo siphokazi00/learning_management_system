@@ -1,436 +1,458 @@
-/* Theme Name: Learning Management System css style*/
-
-* {
-    padding: 0%;
-    margin: 0%;
-    font-family: "Poppins", sans-serif;
-}
-
-.header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(#0b0c1180, rgba(28, 29, 29, 0.5)), url("images/willow\ school.jpeg");
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    padding: 10px 20px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
-}
-
-nav img {
-    width: 150px;
-}
-
-
-/* .nav-links {
+    /* Theme Name: Learning Management System css style*/
+    
+    * {
+        padding: 0%;
+        margin: 0%;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    .header {
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(#0b0c1180, rgba(28, 29, 29, 0.5)), url("images/willow\ school.jpeg");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    
+    nav {
+        display: flex;
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: relative;
+    }
+    
+    nav img {
+        width: 150px;
+    }
+    /* .nav-links {
     display: inline;
     gap: 15px;
     justify-content: end;
     padding-top: 10px;
 
 } */
-
-.nav-links ul {
-    font-size: 23px;
-    padding-top: 10px;
-    text-decoration: none;
-    display: inline;
-    float: right;
-}
-
-.nav-links ul li a {
-    margin: 0;
-}
-
-li {
-    list-style: none;
-    padding-left: 10px;
-    display: inline-block;
-}
-
-li a {
-    color: rgb(217, 156, 43);
-    font-size: 20px;
-    font-weight: 300;
-    margin-right: 25px;
-}
-
-button {
-    background-color: rgb(29, 226, 226);
-    margin-left: 20px;
-    border-radius: 10px;
-    padding: 5px 10px;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-button a {
-    color: rgb(226, 226, 238);
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.nav-links ul li::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #0f0e0e;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-    transition: 0.5s;
-}
-
-.nav-links ul li a,
-.nav-links ul button a {
-    text-decoration: rgb(236, 229, 229);
-    color: inherit;
-}
-
-.text-box {
-    width: 90%;
-    color: rgb(255, 255, 255);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box h1 {
-    font-size: 54px;
-    color: #4db229;
-}
-
-.text-box p {
-    margin: 10px 0 50px;
-    font-size: 15px;
-    color: rgb(227, 215, 215);
-    font-weight: 300;
-}
-
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-
-.hero-btn:hover {
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-
-@media (max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
+    
+    .nav-links ul {
+        font-size: 23px;
+        padding-top: 10px;
+        text-decoration: none;
+        display: inline;
+        float: right;
     }
-    .text-box p {
-        font-size: 12px;
-    }
+    
     .nav-links ul li a {
-        display: block;
+        margin: 0;
     }
-    .nav-links {
-        display: block;
-        position: absolute;
-        background: hsl(222, 72%, 72%);
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
+    
+    li {
+        list-style: none;
+        padding-left: 10px;
+        display: inline-block;
     }
-    .nav .fa-times {
-        display: block;
-        margin: 10px;
-        color: white;
-        font-size: 22px;
+    
+    li a {
+        color: rgb(217, 156, 43);
+        font-size: 20px;
+        font-weight: 300;
+        margin-right: 25px;
+    }
+    
+    button {
+        background-color: rgb(29, 226, 226);
+        margin-left: 20px;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-size: 12px;
         cursor: pointer;
     }
-    .nav-links ul {
-        padding: 30px;
+    
+    button a {
+        color: rgb(226, 226, 238);
+        font-weight: bold;
+        font-size: 15px;
     }
-}
-
-
-/*----courses----*/
-
-.Courses {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-
-h1 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-p {
-    font-size: 15px;
-    color: #171515;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-}
-
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.course-col {
-    flex-basis: 30%;
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: center;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-
-h3 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-}
-
-.course-col hover {
-    box-shadow: 0 0 20px 0 rgba(109, 35, 35, 0.2);
-}
-
-@media screen and (max-width: 700px) {
+    
+    .nav-links ul li::after {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background: #0f0e0e;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    
+    .nav-links ul li:hover::after {
+        width: 100%;
+        transition: 0.5s;
+    }
+    
+    .nav-links ul li a,
+    .nav-links ul button a {
+        text-decoration: rgb(236, 229, 229);
+        color: inherit;
+    }
+    
+    .text-box {
+        width: 90%;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    .text-box h1 {
+        font-size: 54px;
+        color: #4db229;
+    }
+    
+    .text-box p {
+        margin: 10px 0 50px;
+        font-size: 15px;
+        color: rgb(227, 215, 215);
+        font-weight: 300;
+    }
+    
+    .hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        border: 1px solid white;
+        padding: 12px 34px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .hero-btn:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+    }
+    
+    @media (max-width: 700px) {
+        .text-box h1 {
+            font-size: 20px;
+        }
+        .text-box p {
+            font-size: 12px;
+        }
+        .nav-links ul li a {
+            display: block;
+        }
+        .nav-links {
+            display: block;
+            position: absolute;
+            background: hsl(222, 72%, 72%);
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+        }
+        .nav .fa-times {
+            display: block;
+            margin: 10px;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .nav-links ul {
+            padding: 30px;
+        }
+    }
+    /*----courses----*/
+    
+    .Courses {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    p {
+        font-size: 15px;
+        color: #171515;
+        font-weight: 300;
+        line-height: 22px;
+        padding: 10px;
+    }
+    
     .row {
-        flex-direction: column;
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
     }
-}
-
-
-/*----Campus----*/
-
-.campus {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.campus-col {
-    flex: 1;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.campus-col img {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(44, 29, 29, 0.1);
-}
-
-.layer {
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.layer:hover {
-    background: rgba(9, 9, 9, 0.5);
-}
-
-.layer h3 {
-    width: 100%;
-    font-weight: 500;
-    color: #ed9e0c;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    font-style: oblique;
-    font-size: 10px;
-}
-
-.layer:hover h3 {
-    bottom: 49%;
-    opacity: 1;
-}
-
-
-/*---- facilities----*/
-
-.facilities {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
-}
-
-.facilities h1 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-.facilities p {
-    font-size: 15px;
-    color: rgb(28, 18, 5);
-    margin-bottom: 40px;
-    font-style: italic;
-}
-
-.facilities .row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.facilities-col {
-    flex: 1;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(44, 29, 29, 0.1);
-    background: rgb(222, 240, 240);
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    margin: 10px auto;
-    padding: 20px;
-}
-
-.facilities-col img {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.facilities-col h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: #333;
-}
-
-
-/*--- willow students ---*/
-
-.students {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
-}
-
-.students h1 {
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.students p {
-    font-size: 15px;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.students .row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.students-col {
-    flex: 1;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(44, 29, 29, 0.1);
-    background: rgb(222, 240, 240);
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    margin: 10px auto;
-    padding: 20px;
-}
-
-.students-col img {
-    width: 100%;
-    height: 150px;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(245, 135, 135, 0.1);
-}
-
-.students-col h3 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: gray;
-}
-
-
-/*---Somia ends here ---*/
-
-
-/*    FOOTER STYLE  */
-
-.footer {
-    display: flex;
-    gap: 24px;
-    padding: 32px;
-    background-color: rgb(222, 240, 240);
-}
-
-.sch {
-    display: block;
-    width: 40rem;
-}
-
-.sch2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.sch-courses {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
+    
+    .course-col {
+        flex-basis: 30%;
+        background: #fff3f3;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: center;
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    
+    h3 {
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    
+    .course-col hover {
+        box-shadow: 0 0 20px 0 rgba(109, 35, 35, 0.2);
+    }
+    
+    @media screen and (max-width: 700px) {
+        .row {
+            flex-direction: column;
+        }
+    }
+    /*----Campus----*/
+    
+    .campus {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px 0;
+    }
+    
+    .campus-col {
+        flex: 1;
+        max-width: 300px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .campus-col img {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(44, 29, 29, 0.1);
+    }
+    
+    .layer {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .layer:hover {
+        background: rgba(9, 9, 9, 0.5);
+    }
+    
+    .layer h3 {
+        width: 100%;
+        font-weight: 500;
+        color: #ed9e0c;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        font-style: oblique;
+        font-size: 10px;
+    }
+    
+    .layer:hover h3 {
+        bottom: 49%;
+        opacity: 1;
+    }
+    /*---- facilities----*/
+    
+    .facilities {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .facilities h1 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    
+    .facilities p {
+        font-size: 15px;
+        color: rgb(28, 18, 5);
+        margin-bottom: 40px;
+        font-style: italic;
+    }
+    
+    .facilities .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px 0;
+    }
+    
+    .facilities-col {
+        flex: 1;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(44, 29, 29, 0.1);
+        background: rgb(222, 240, 240);
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        margin: 10px auto;
+        padding: 20px;
+    }
+    
+    .facilities-col img {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    
+    .facilities-col h3 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+        color: #333;
+    }
+    /*--- willow students ---*/
+    
+    .students {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .students h1 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    
+    .students p {
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+    
+    .students .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px 0;
+    }
+    
+    .students-col {
+        flex: 1;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(44, 29, 29, 0.1);
+        background: rgb(222, 240, 240);
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        margin: 10px auto;
+        padding: 20px;
+    }
+    
+    .students-col img {
+        width: 100%;
+        height: 150px;
+        border-radius: 10px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(245, 135, 135, 0.1);
+    }
+    
+    .students-col h3 {
+        font-size: 20px;
+        margin: 10px 0;
+        color: gray;
+    }
+    /*---Somia ends here ---*/
+    /*    FOOTER STYLE  */
+    
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 32px;
+        background-color: rgb(222, 240, 240);
+        ul li {
+            display: flex;
+            flex-direction: column;
+        }
+        p {
+            width: 300px;
+        }
+        h3 {
+            display: flex;
+            margin: 10px;
+            text-align: center;
+        }
+    }
+    
+    .sch {
+        display: flex;
+        flex-direction: column;
+        width: 40rem;
+        gap: 10px;
+    }
+    
+    .sch2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+    
+    .sch-courses {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 16px 32px;
+        width: 300px;
+        height: 100px;
+    }
+    
+    .portal-links {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 12px 24px;
+        width: 180px;
+        height: 100px;
+    }
+    
+    .support-level {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 10px 20px;
+        width: 180px;
+        height: 100px
+    }
