@@ -101,12 +101,16 @@ nav-links ul li:hover::after {
     justify-content: space-between;
     padding: 32px;
     background-color: rgb(222, 240, 240);
-    ul li {
+    li {
         display: flex;
         flex-direction: column;
+        font-size: 16px;
+        font-weight: 500;
     }
     p {
         width: 300px;
+        font-size: 16px;
+        font-weight: 500;
     }
     h3 {
         display: flex;
@@ -120,6 +124,8 @@ nav-links ul li:hover::after {
     flex-direction: column;
     width: 40rem;
     gap: 10px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .sch2 {
@@ -133,7 +139,7 @@ nav-links ul li:hover::after {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin: 16px 32px;
+    margin: 16px 36px;
     width: 300px;
     height: 100px;
 }
@@ -147,6 +153,9 @@ nav-links ul li:hover::after {
     height: 100px;
     ul li a {
         text-decoration: none;
+        color: #0f0e0e;
+        font-size: 18px;
+        font-weight: 500;
     }
 }
 
@@ -157,4 +166,13 @@ nav-links ul li:hover::after {
     margin: 10px 20px;
     width: 180px;
     height: 100px
+}
+
+.pay {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 10px 20px;
+    width: 200px;
+    height: 100px;
 }
