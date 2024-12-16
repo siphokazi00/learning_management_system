@@ -407,6 +407,43 @@ h3 {
 
 
 /*  Testimonial section*/
+.testimonial{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.testimonial-col h3{
+    font-size: 5px;
+    text-align: center;
+    margin-top: 15px;
+}
+.testimonial-col p{
+    font-size: 15px;
+    color: #171515;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0;
+    font-style: oblique;
+}
+.testimoonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    background: #fff3f3;
+    display: flex;
+    padding: 25px;
+    cursor: pointer;
+}
+.testimonial-col img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 5px;
+}
 
 
 /* you have not complete*/
@@ -422,11 +459,12 @@ h3 {
     justify-content: space-between;
     padding: 32px;
     background-color: rgb(222, 240, 240);
-    li {
-        display: flex;
-        flex-direction: column;
-        font-size: 16px;
-        font-weight: 500;
+
+    .li {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 500;
     }
     p {
         width: 300px;
