@@ -444,9 +444,63 @@ h3 {
     margin-right: 10px;
     margin-left: 5px;
 }
+.testimonial-col .fa{
+    color: #ed9e0c;
+}
+@media(max-width: 700px){
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right:  15px;
+    }
+}
+    
+/*---Enroll---*/
+.enrol{
+    margin: 50px auto;
+    width: 90%;
+    background-image: linear-gradient(rgba(239, 223, 223, 0.5), rgba(230, 217, 137, 0.5)), url("images/willow\ library.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 100px 0;
+    text-align: center;
+    justify-content: center;
+}
+.enrol h1{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color: #070202;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .enrol h1{
+        font-size: 15px;
+    }
+}
 
 
-/* you have not complete*/
+/*---Footer---*/
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 32px 0;
+}
+.footer h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.icons .fa {
+    color: #f44336;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 18px 0;
+}
 
 
 /*---Somia ends here ---*/
@@ -454,7 +508,7 @@ h3 {
 
 /*    FOOTER STYLE  */
 
-.footer {
+/* .footer {
     display: flex;
     justify-content: space-between;
     padding: 32px;
@@ -535,4 +589,4 @@ h3 {
     margin: 10px 20px;
     width: 200px;
     height: 100px;
-}
+} */
