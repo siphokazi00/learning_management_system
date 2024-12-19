@@ -1,93 +1,54 @@
-/* General Styles */
-
-
-/*      Header   section  */
-
-
-/*
-.header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(#b1b5c980, rgba(4, 9, 30, 0.5)), url("images/willow\ school.jpeg");
-    background-position: center;
-    background-size: cover;
-    position: relative;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-nav {
+header {
     display: flex;
-    padding: 1% 2%;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
+    margin: 18px 24px;
+    .logo {
+        display: flex;
+        max-width: fit-content;
+        max-height: fit-content;
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+        }
+        img {
+            padding-top: 10px;
+            width: 46px;
+            height: 46px;
+            padding-top: 14px;
+        }
+    }
+    .list ul li {
+        display: inline-flex;
+        margin-left: 32px;
+        color: #0d0d0e;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .nav {
+        margin-bottom: 24px;
+    }
+    a {
+        text-decoration: none;
+        margin-right: 32px;
+        color: #0d0d0e;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .lg1 {
+        color: #0C2A5E;
+    }
+    .lg2 {
+        color: #C3974E;
+    }
 }
-
-nav img {
-    width: 150px;
-}
-
-nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    margin: 0;
-}
-
-nav-links ul li {
-    display: inline-block;
-    list-style: none;
-    padding: 8px 12px;
-    position: relative;
-}
-
-li {
-    list-style: none;
-    padding-left: 10px;
-    display: inline-block;
-}
-
-li a {
-    color: rgb(217, 156, 43);
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 25px;
-}
-
-button {
-    background-color: rgb(29, 226, 226);
-    margin-left: 20px;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 15px;
-}
-
-button a {
-    color: rgb(226, 226, 238);
-    font-weight: bold;
-    font-size: 15px;
-}
-
-nav-links ul li::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-nav-links ul li:hover::after {
-    width: 100%;
-    transition: 0.5s;
-}
-
-.nav-links ul li a,
-.nav-links ul button a {
-    text-decoration: rgb(236, 229, 229);
-    color: inherit;
-}
-*/
 
 
 /*    FOOTER STYLE  */
@@ -118,7 +79,7 @@ nav-links ul li:hover::after {
 .sch {
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    width: 37rem;
     gap: 10px;
     font-size: 16px;
     font-weight: 400;
@@ -136,7 +97,7 @@ nav-links ul li:hover::after {
     flex-direction: column;
     align-content: center;
     margin: 16px 36px;
-    width: 300px;
+    width: 285px;
     height: 100px;
 }
 
@@ -145,7 +106,7 @@ nav-links ul li:hover::after {
     flex-direction: column;
     align-content: center;
     margin: 12px 24px;
-    width: 180px;
+    width: 165px;
     height: 100px;
     ul li a {
         text-decoration: none;
@@ -160,7 +121,7 @@ nav-links ul li:hover::after {
     flex-direction: column;
     align-content: center;
     margin: 10px 20px;
-    width: 180px;
+    width: 165px;
     height: 100px
 }
 
@@ -169,6 +130,6 @@ nav-links ul li:hover::after {
     flex-direction: column;
     align-content: center;
     margin: 10px 20px;
-    width: 200px;
+    width: 185px;
     height: 100px;
 }
