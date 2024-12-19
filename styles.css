@@ -407,26 +407,163 @@ h3 {
 
 
 /*  Testimonial section*/
+.testimonial{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.testimonial-col h3{
+    font-size: 5px;
+    text-align: center;
+    margin-top: 15px;
+}
+.testimonial-col p{
+    font-size: 15px;
+    color: #171515;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 0;
+    font-style: oblique;
+}
+.testimoonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    background: #fff3f3;
+    display: flex;
+    padding: 25px;
+    cursor: pointer;
+}
+.testimonial-col img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.testimonial-col .fa{
+    color: #ed9e0c;
+}
+@media(max-width: 700px){
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right:  15px;
+    }
+}
+    
+/*---Enroll---*/
+.enrol{
+    margin: 50px auto;
+    width: 90%;
+    background-image: linear-gradient(rgba(239, 223, 223, 0.5), rgba(230, 217, 137, 0.5)), url("images/willow\ library.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 100px 0;
+    text-align: center;
+    justify-content: center;
+}
+.enrol h1{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color: #070202;
+    padding: 0;
+}
+@media(max-width: 700px){
+    .enrol h1{
+        font-size: 15px;
+    }
+}
 
 
-/* you have not complete*/
+/*---Footer---*/
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 32px 0;
+}
+.footer h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.icons .fa {
+    color: #f44336;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 18px 0;
+}
 
 
+
+/*--About us page--*/
+
+.sub-header {
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9, 30,0.7), rgba(233, 232, 232, 0.5)), url("images/willow\ gradution.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1 {
+    margin-top: 100px;
+}
+.about-us {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+
+}
+.about-col img {
+    width: 100%;
+    height: 300px;
+    text-align: right;
+}
+.about-col h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding-top: 0;
+}
+.red-btn{
+    border: 1px solid #e6d7d6;
+    background: transparent;
+    color: #0d0d0d;
+    padding: 10px 20px;
+
+}
 /*---Somia ends here ---*/
 
 
 /*    FOOTER STYLE  */
 
-.footer {
+/* .footer {
     display: flex;
     justify-content: space-between;
     padding: 32px;
     background-color: rgb(222, 240, 240);
-    li {
-        display: flex;
-        flex-direction: column;
-        font-size: 16px;
-        font-weight: 500;
+
+    .li {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 500;
     }
     p {
         width: 300px;
@@ -497,4 +634,4 @@ h3 {
     margin: 10px 20px;
     width: 200px;
     height: 100px;
-}
+} */

@@ -4,13 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/About.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/9686d18915.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+
+
+    <title>Willow Academy</title>
 </head>
 
+</div>
+
 <body>
-    <!-- Header section-->
-    <section class="Header">
+    <section class="sub-header">
         <nav>
             <a href="index.html"><img src="images/Black_Illustrated_School_Logo-removebg-preview.png"></a>
             <div class="nav-links">
@@ -19,16 +27,20 @@
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="About.html">About us</a></li>
+                    <button><a href="#">Sign up</a></button>
+                    <button><a href="#">Sign In</a></button>
                 </ul>
             </div>
             <div>
                 <button><a href="#">Sign up</a></button>
                 <button><a href="#">Sign In</a></button>
             </div>
+            <i class="fa fa-bars" onclick="hideMenu()"></i>
         </nav>
+        <h1>About Us</h1>
     </section>
     <section class="About us">
-        <h2>Wellcome to Wilow Academy</h2>
+        <h2>Wellcome to Wi low Academy</h2>
         <p>At Willow University, we are committed to shaping the leaders, innovators, and visionaries of tomorrow. Since our founding in 1997, we have grown into a diverse and dynamic institution that offers a wide range of academic programs designed to
             inspire curiosity, foster creativity, and empower excellence.</p>
 
@@ -60,32 +72,48 @@
         </div>
     </section>
 
-    <!--   Footer section  -->
+
+    <!---My Footer--->
+
     <section class="footer">
-        <div class="sch">
-            <h3>Wilow Academy</h3>
-            <p>Wilow Academy Provides you with an Enviroment that has a well conducive and structured building for learning</p>
+        <h4>About Us</h4>
+        <p>Willow University is an award Winning University with high Profile Professors and <br> lecturers, we offer first hand Education , visit us and learn more.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>© 2024 Willow Academy. All Rights Reserved</p>
+    </section>
+
+
+    <!-- 
+       FOOTER SECTION
+    <section class=" footer ">
+        <div class="sch ">
+            <h3>Willow Academy</h3>
+            <p>Willow Academy Provides you with an Enviroment that has a well conducive and structured building for learning</p>
         </div>
         <div class="sch2">
-            <div class="sch-courses ">
+            <div class="sch-courses">
                 <h3>COURSES</h3>
                 <ul>
-                    <li>Faculty of Science</li>
-                    <li>Faculty of Technology</li>
-                    <li>Faculty of Art </li>
-                    <li>Faculty of Agriculture and Forestry </li>
-                    <li>Faculty of Education </li>
+                    <li>Department of Science</li>
+                    <li>Department of Engineering</li>
+                    <li>Department of Art </li>
                 </ul>
             </div>
-            <div class="portal-links">
+        <div
+        class="portal-links ">
                 <h3>PORTAL</h3>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="Courses.html">COURSES</a></li>
-                    <li><a href="About.html">ABOUT US</a></li>
+                    <li><a id="lnk " href="index.html ">HOME</a></li>
+                    <li><a id="lnk " href="Courses.html ">COURSES</a></li>
+                    <li><a id="lnk " href="About.html ">ABOUT US</a></li>
                 </ul>
             </div>
-            <div class="support-level">
+            <div class="support-level ">
                 <h3>SUPPORT</h3>
                 <ul>
                     <li>FAQS</li>
@@ -94,16 +122,28 @@
                 </ul>
             </div>
             <div class="pay">
-                <h3>PAY METHOD</h3>
+                <h3>PAYMENT METHOD</h3>
                 <div>
-                    <img src="#" alt="MASTERCARD">
-                    <img src="#" alt="VISA CARD">
-                    <img src="#" alt="FLUTTERWAVE">
+                    <img src="# " alt="MASTERCARD ">
+                    <img src="# " alt="VISA CARD ">
+                    <img src="# " alt="FLUTTERWAVE ">
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    <!----javascript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks ");
+
+        function showMenu() {
+            navLinks.style.right = "0 ";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px ";
+        }
+    </script>
 </body>
 
 </html>
