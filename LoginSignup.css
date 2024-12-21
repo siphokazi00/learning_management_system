@@ -1,0 +1,76 @@
+/* Common Styles */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.login-box {
+    width: 300px;
+    background: #fff;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background: #555;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
