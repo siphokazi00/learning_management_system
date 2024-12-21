@@ -559,8 +559,8 @@
             margin-top: 24px;
         }
         .premesis #sch-pre img {
-            align-items: center;
-            width: 670px;
+            justify-items: center;
+            width: 745px;
             height: 600px;
         }
         .premesis #sch2 img {
@@ -605,5 +605,49 @@
         border: none;
         border-radius: 3px;
         cursor: pointer;
+    }
+    /*  Courses style */
+    
+    {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    h1 {
+        margin-bottom: 20px;
+    }
+    
+    .course-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+    
+    .course-image {
+        max-width: 100%;
+        height: 300px;
+        margin-bottom: 15px;
+    }
+    
+    .course-details {
+        margin-bottom: 10px;
+    }
+    
+    .course-description {
+        margin-bottom: 15px;
+    }
+    
+    .button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        text-decoration: none;
+        align-items: center;
     }
     /*---Somia ends here ---*/
