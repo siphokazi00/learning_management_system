@@ -1,3 +1,4 @@
+console.log('Login endpoint hit');
 const UserModel = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
