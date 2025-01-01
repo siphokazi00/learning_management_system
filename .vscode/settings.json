@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "webstack",
+            "name": "Webstack_project",
+            "username": "postgres",
+            "password": "root"
+        }
+    ]
+}
