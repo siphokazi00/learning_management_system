@@ -1,0 +1,100 @@
+// console.log('Starting test: should create a user successfully');
+// Import dependencies
+const chai = require('chai');
+const expect = chai.expect;
+const request = require('supertest'); // Import Supertest for endpoint testing
+const app = require('../server'); // Import your server
+const UserModel = require('../models/userModel'); // Import the UserModel
+const pool = require('../config/db'); // Import the database pool
+
+// Provide Mocha functions for Node.js execution
+if (typeof describe === 'undefined') {
+  global.describe = (name, fn) => fn(); // Define describe as a no-op function
+  global.it = (name, fn) => fn();       // Define it as a no-op function
+  global.beforeEach = (fn) => fn();     // Define beforeEach as a no-op function
+}
+
+describe('UserModel Tests', () => {
+  // Clean up the database before each test
+  beforeEach(async () => {
+    try {
+      await pool.query('DELETE FROM users WHERE email = $1', ['sentyehu2002@gmail.com']);
+      console.log('Cleaned up test user.');
+      const result = await pool.query('SELECT * FROM users WHERE email = $1', ['sentyehu2002@gmail.com']);
+      console.log('Remaining users with email:', result.rows); // Should be an empty array
+    } catch (err) {
+      console.error('Error cleaning up test user:', err.message);
+    }
+  });
+
+  // Test the login/logout method
+  describe('UserModel Tests', () => {
+  it('should logout a user successfully', async () => {
+    const token = 'your_jwt_token_here'; // Token from the login response
+  
+    const res = await request(app)
+      .post('/api/auth/logout') // Test POST the logout endpoint
+      .set('Authorization', `Bearer ${token}`); // Pass the token Authorization header
+  
+    expect(res.status).to.equal(200);
+    expect(res.body).to.have.property('message', 'Logout successful');
+  });  
+
+  // Test the createUser method
+  it('should create a user successfully', async () => {
+    const user = await UserModel.createUser({
+      name: 'sentayehu demissie',
+      email: 'sentyehu2002@gmail.com',
+      password: '123',
+      role: 'Instructor',
+    });
+    expect(user).to.have.property('id');
+    expect(user.email).to.equal('sentyehu2002@gmail.com');
+  });
+
+  it('should find a user by email', async () => {
+    // First, create the user
+    await UserModel.createUser({
+      name: 'sentayehu demissie',
+      email: 'sentyehu2002@gmail.com',
+      password: '123',
+      role: 'Instructor',
+    });
+
+    // Then, find the user
+    const user = await UserModel.findByEmail('sentyehu2002@gmail.com');
+    expect(user).to.not.be.null;
+    expect(user.email).to.equal('sentyehu2002@gmail.com');
+  });
+
+  it('should handle duplicate user creation gracefully', async () => {
+    // First, create the user
+    await UserModel.createUser({
+      name: 'sentayehu demissie',
+      email: 'sentyehu2002@gmail.com',
+      password: '123',
+      role: 'Instructor',
+    });
+
+    // Attempt to create a duplicate user
+    try {
+      await UserModel.createUser({
+        name: 'sentayehu demissie',
+        email: 'sentyehu2002@gmail.com',
+        password: '123',
+        role: 'Instructor',
+      });
+    } catch (err) {
+      expect(err.message).to.include('duplicate key value violates unique constraint');
+    }
+  });
+});
+
+// Run tests directly when executed with Node.js
+if (require.main === module) {
+  (async () => {
+    console.log('Starting UserModel Tests...');
+    await describe('UserModel Tests', async () => {}); // Call the describe function
+    console.log('UserModel Tests Completed.');
+  })();
+}

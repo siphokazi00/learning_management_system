@@ -5,8 +5,8 @@
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
-            "name": "webstack_project",
             "database": "webstack",
+            "name": "Webstack_project",
             "username": "postgres",
             "password": "root"
         }
