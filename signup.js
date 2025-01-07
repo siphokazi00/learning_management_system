@@ -1,4 +1,4 @@
-document.getElementById('signupForm').addEventListener('submit', async function (e) {
+document.getElementById('signupForm').addEventListener('submit', async function(e) {
     e.preventDefault();
 
     const fullName = document.getElementById('fullName').value;
@@ -14,7 +14,7 @@ document.getElementById('signupForm').addEventListener('submit', async function 
 
         if (response.ok) {
             alert('Sign-up successful! Please log in.');
-            window.location.href = 'login.html'; // Redirect to the login page
+            window.location.href = 'payments.html'; // Redirect to the login page
         } else {
             const error = await response.json();
             alert(error.message || 'Sign-up failed. Please try again.');
