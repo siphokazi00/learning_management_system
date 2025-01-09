@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 {
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -20,35 +20,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
-}
-=======
-{
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "bcryptjs": "^2.4.3",
-    "bootstrap": "^5.3.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "express-validator": "^7.2.0",
-    "jsonwebtoken": "^9.0.2",
-    "pg": "^8.13.1"
-  },
-  "name": "learning_management_system",
-  "version": "1.0.0",
-  "description": "The Willow Academy Learning Management System (LMS) is a comprehensive web-based platform designed to streamline academic and administrative processes for educational institutions. It serves as a centralized hub where students, faculty, and administrators can securely access and manage educational information and services.",
-  "main": "login.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^5.1.2",
     "mocha": "^11.0.1"
   }
 }
->>>>>>> d67d0dc32608bb00a6861a634e659925a849e48e
