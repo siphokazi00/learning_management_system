@@ -11,11 +11,7 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
 
-<<<<<<< HEAD
-    <link rel="stylesheet"href="responsive.css">
-=======
     <link rel="stylesheet" href="css/About.css">
->>>>>>> cbc8f97e807511c2ccfe0bb0e746b7fe6bea1d31
 
 
     <title>Willow Academy</title>
@@ -28,17 +24,18 @@
         <nav>
             <a href="index.html"><img src="images/Black_Illustrated_School_Logo-removebg-preview.png"></a>
             <div class="nav-links">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
                     <li><a href="About.html">About us</a></li>
                     <button><a href="signup.html">Sign up</a></button>
                     <button><a href="login.html">Sign In</a></button>
                 </ul>
             </div>
 
-            <i class="fa fa-bars" onclick="hideMenu()"></i>
+            <!-- <i class="fa fa-bars" onclick="hideMenu()"></i> -->
         </nav>
         <h1>About Us</h1>
     </section>
@@ -107,7 +104,8 @@
 
     <!----javascript for toggle menu---->
     <script>
-        var navLinks = document.getElementById("navLinks ");
+        var navLinks = document.querySelector('.nav-links');
+
 
         function showMenu() {
             navLinks.style.right = "0 ";

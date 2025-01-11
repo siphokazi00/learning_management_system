@@ -31,7 +31,7 @@
 
             <i class="fa fa-bars" onclick="hideMenu()"></i>
         </nav>
-        <h1>Avalaible courses</h1>
+        <h1 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #982929; text-align: center; margin-top: 40px;">Courses We Offer</h1>
     </section>
     <section>
         <h1>Our Courses</h1>
@@ -41,16 +41,48 @@
                 <img src="images/wilow laboratory.jpeg" alt="Course 1" class="course-image">
                 <h2>Faculty of Science</h2>
                 <p class="course-details">The Faculty of Science is dedicated to providing high-quality education and research in a wide range of scientific disciplines. We offer undergraduate and postgraduate programs in various fields, including:</p>
-                <ul>
-                    <li>Biology</li>
-                    <li>Chemistry</li>
-                    <li>Physics</li>
-                    <li>Mathematics</li>
-                    <li>Computer Science</li>
-                    <li>Statistics</li>
-                    <li>Environmental Science</li>
-                    <li>And more...</li>
-                </ul>
+                <div class="departmental-courses">
+                    <ol>
+                        <table>
+                            <tr>
+                                <th style="text-align: left; color: chocolate;">Departmental Courses</th>
+                            </tr>
+                            <tr>
+                                <td>Biology</td>
+                            </tr>
+                            <tr>
+                                <td>Chemistry</td>
+                            </tr>
+                            <tr>
+                                <td>Physics</td>
+                            </tr>
+                            <tr>
+                                <td>Mathematics</td>
+                            </tr>
+                            <tr>
+                                <td>Computer Science</td>
+                            </tr>
+                            <tr>
+                                <td>Statistics</td>
+                            </tr>
+                            <tr>
+                                <td>Environmental Science</td>
+                            </tr>
+                            <tr>
+                                <td>Biochemistry</td>
+                            </tr>
+                            <tr>
+                                <td>Geo-science and Geology</td>
+                            </tr>
+                            <tr>
+                                <td>Biotechnology</td>
+                            </tr>
+                            <tr>
+                                <td>And more...</td>
+                            </tr>
+                        </table>
+                        
+                </div>
                 <p class="course-description">Our faculty is committed to excellence in teaching, research, and innovation. We provide our students with the knowledge and skills they need to succeed in their chosen careers.
                 </p>
                 <a href="signup.html" class="button">Enroll Now</a>
@@ -146,7 +178,8 @@
 
     <!----javascript for toggle menu---->
     <script>
-        var navLinks = document.getElementById("navLinks");
+        var navLinks = document.querySelector('.nav-links');
+
 
         function showMenu() {
             navLinks.style.right = "0";
