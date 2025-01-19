@@ -50,6 +50,23 @@ header {
     }
 }
 
-.premesis {
+.About-us {
     display: flex;
+    flex-direction: column;
+    h2,
+    h3 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        margin-top: 24px;
+    }
+    .premesis #sch-pre img {
+        justify-items: center;
+        width: 745px;
+        height: 600px;
+    }
+    .premesis #sch2 img {
+        width: 100%;
+        height: 800px;
+    }
 }
