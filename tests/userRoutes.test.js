@@ -1,8 +1,10 @@
 const request = require('supertest');
-const app = require('../server'); // Adjust the path as necessary
-const pool = require('../config/db'); // Database connection
+const app = require('../server'); 
+const pool = require('../config/db'); 
 
 describe('User API Endpoints', () => {
+  let userId;
+
   beforeAll(async () => {
     // Optionally, you can set up your database here
   });
@@ -22,7 +24,8 @@ describe('User API Endpoints', () => {
         role: 'student'
       });
     expect(res.statusCode).toEqual(201);
-    expect(res.body).toHaveProperty('email', 'testuser@example.com');
+    expect(res.body).toHaveProperty('email', 'fasil@gmail.com');
+    userId = res.body.id;
   });
 
   it('should get all users', async () => {
@@ -32,14 +35,14 @@ describe('User API Endpoints', () => {
   });
 
   it('should get a user by email', async () => {
-    const res = await request(app).get('/api/users/testuser@example.com');
+    const res = await request(app).get(`/api/users/${userId}`);
     expect(res.statusCode).toEqual(200);
-    expect(res.body).toHaveProperty('email', 'testuser@example.com');
+    expect(res.body).toHaveProperty('email', 'fasil@gmail.com');
   });
 
   it('should update a user by email', async () => {
     const res = await request(app)
-      .put('/api/users/testuser@example.com')
+      .put(`/api/users/${userId}`)
       .send({
         name: 'Updated User',
         password: 'newpassword123',
@@ -50,8 +53,7 @@ describe('User API Endpoints', () => {
   });
 
   it('should delete a user by email', async () => {
-    const res = await request(app).delete('/api/users/testuser@example.com');
+    const res = await request(app).delete(`/api/users/${userId}`);
     expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty('message', 'User deleted successfully');
   });
-};
