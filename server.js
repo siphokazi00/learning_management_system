@@ -11,22 +11,27 @@ const protectedRoutes = require('./routes/protectedRoutes'); // Import protected
 const app = express(); // Initialize the Express app
 
 // Middleware
-app.use(express.json()); // parse JSON request bodies
-app.use(cors()); // enable CORS
-
+app.use(express.json()); // Parse JSON request bodies
+app.use(cors()); // Enable CORS
 app.use(bodyParser.json()); // Parse JSON request bodies
-app.use('/api/users', userRoutes); // Add user routes
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/protected', protectedRoutes); // Register protected routes
+app.use('/api/users', userRoutes); // Add user routes
+app.use('/api/auth', authRoutes); // Authentication routes
+app.use('/api/protected', protectedRoutes); // Protected routes
 
-// Middleware to serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+// Middleware to serve static files from the 'Frontend' folder
+app.use(express.static(path.join(__dirname, 'Frontend')));
 
-// Test Route
+// Route to serve the index.html file
 app.get('/', (req, res) => {
-  res.send('Server is running!');
+  res.sendFile(path.join(__dirname, 'Frontend', 'index.html'));
+});
+
+// Error handling middleware
+app.use((req, res, next) => {
+  res.status(404).send('Page not found');
 });
 
 // Start the server
@@ -45,10 +50,6 @@ pool.query('SELECT * FROM users', (err, res) => {
     console.log('Users table data:', res.rows);
   }
 });
-//pool.query('SELECT NOW()', (err, res) => {
-  //if (err) console.error('Database test failed:', err);
-  //else console.log('Database test succeeded:', res.rows[0]);
-//});
 
 console.log('Database Host:', process.env.DB_HOST);
 console.log('Protected routes registered at /api/protected');
