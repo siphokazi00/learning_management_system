@@ -10,7 +10,7 @@
     .header {
         min-height: 100vh;
         width: 100%;
-        background-image: linear-gradient(#0b0c1180, rgba(28, 29, 29, 0.5)), url("images/willow\ school.jpeg");
+        background-image: linear-gradient(#04040480, rgba(28, 29, 29, 0.5)), url("images/willow\ school.jpeg");
         background-position: center;
         background-size: cover;
         position: relative;
@@ -73,7 +73,7 @@
     }
     
     button a {
-        color: rgb(226, 226, 238);
+        color: rgb(222, 175, 2);
         font-weight: bold;
         font-size: 15px;
     }
@@ -111,11 +111,13 @@
     
     .text-box h1 {
         font-size: 54px;
-        color: #4db229;
+        color: rgb(240, 27, 27);
+        margin-top: 70px;
+        margin-bottom: 20px;
     }
     
     .text-box p {
-        margin: 10px 0 50px;
+        margin: 10px 0 30px;
         font-size: 15px;
         color: rgb(227, 215, 215);
         font-weight: 300;
@@ -151,10 +153,10 @@
         .nav-links {
             display: block;
             position: absolute;
-            margin-top: 0%;
+            margin-top: 20px;
             background: hsl(222, 72%, 72%);
             height: 100vh;
-            width: 100px;
+            width: 200px;
             top: 0;
             right: -200px;
             text-align: center;
@@ -185,7 +187,7 @@
         font-size: 20px;
         font-weight: 600;
     }
-    
+
     p {
         font-size: 15px;
         color: #171515;
@@ -564,6 +566,78 @@
         margin: 0;
 
     }
+    .about-mission {
+        flex-basis: 30%;
+        background: #e8dddd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: center;
+        box-sizing: border-box;
+        gap: 1rem;
+    }
+    .about-mission img {
+        width: 350px;
+        height: 200px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .about-mission p {
+        margin: 20px auto;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: justify;
+        border-radius: 8px;
+    }
+    .our-unique {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .our-unique img {
+        width: 350px;
+        height: 200px;
+        text-align: center;
+        border-radius: 10px;
+
+    }
+    .our-history {
+        flex-basis: 30%;
+        background: #e8dddd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: center;
+        box-sizing:content-box;
+        gap: 1rem;
+    }
+    .our-history img {
+        width: 350px;
+        height: 200px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .premesis {
+        display: flex;
+        text-align: center;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+    .premesis img {
+        width: 350px;
+        height: 200px;
+        text-align: center;
+        border-radius: 10px;
+
+    }
+    .About-us a {
+        text-decoration:  black;
+        color: hsl(0, 38%, 6%);
+        background: #007bff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
     .red-btn {
         border: 1px solid #e6d7d6;
         background: transparent;

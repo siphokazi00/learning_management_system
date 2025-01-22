@@ -1,7 +1,9 @@
 const roleMiddleware = (allowedRoles) => {
   return (req, res, next) => {
-    if (!allowedRoles.includes(req.user.role)) {
-      return res.status(403).json({ error: 'Access denied. Insufficient permissions.' });
+    if (!req.user || !allowedRoles.includes(req.user.role)) {
+      const error = new Error('Access denied. Insufficient permissions.');
+      error.status = 403;
+      return next(error);
     }
     next();
   };
