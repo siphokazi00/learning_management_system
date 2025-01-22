@@ -1,21 +1,20 @@
 const jwt = require('jsonwebtoken');
 
-const authMiddleware = (req, res, next) => {
-  // Extract token from Authorization header
-  const token = req.header('Authorization')?.replace('Bearer ', '');
-  if (!token) {
-    console.log('No token provided, redirecting to login.');
-    return res.status(401).json({ error: 'Unauthorized: No token provided.' }); // Return error instead of redirect
-  }
-
+const authMiddleware = async (req, res, next) => {
   try {
-    // Verify token
+    const token = req.header('Authorization')?.replace('Bearer ', '');
+    if (!token) {
+      throw new Error('Unauthorized: No token provided.');
+    }
+
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded; // Attach decoded user info to the request object
+    req.user = decoded;
     next();
   } catch (err) {
-    console.error('Invalid token:', err.message);
-    return res.status(403).json({ error: 'Forbidden: Invalid or expired token.' }); // Return error instead of redirect
+    const statusCode = err.name === 'TokenExpiredError' ? 401 : 403;
+    const errorMessage = err.name === 'TokenExpiredError' ? 'Unauthorized: Token has expired.' : 'Unauthorized: Invalid token.';
+    console.error('Authentication error:', err.message);
+    return res.status(statusCode).json({ error: errorMessage });
   }
 };
 
