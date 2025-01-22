@@ -16,6 +16,12 @@ app.use(cors()); // Enable CORS
 app.use(bodyParser.json()); // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 
+// Logging Middleware
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
+
 // Routes
 app.use('/api/users', userRoutes); // Add user routes
 app.use('/api/auth', authRoutes); // Authentication routes
@@ -26,29 +32,29 @@ app.use(express.static(path.join(__dirname, 'Frontend')));
 
 // Route to serve the index.html file
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, 'Frontend', 'index.html'));
 });
 
 // Error handling middleware
 app.use((req, res, next) => {
-  res.status(404).send('Page not found');
+    res.status(404).send('Page not found');
 });
 
 // Start the server
 if (require.main === module) {
-  const PORT = process.env.PORT || 5500;
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    const PORT = process.env.PORT || 5500;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }
 
 // Log environment and database connection
 const pool = require('./config/db');
 
 pool.query('SELECT * FROM users', (err, res) => {
-  if (err) {
-    console.error('Error querying users table:', err);
-  } else {
-    console.log('Users table data:', res.rows);
-  }
+    if (err) {
+        console.error('Error querying users table:', err);
+    } else {
+        console.log('Users table data:', res.rows);
+    }
 });
 
 console.log('Database Host:', process.env.DB_HOST);

@@ -25,6 +25,9 @@
                     <li><a href="About.html">About us</a></li>
                     <button><a href="signup.html">Sign up</a></button>
                     <button><a href="login.html">Sign In</a></button>
+                    <button class="create-user-btn" onclick="scrollToCreateUser()">
+                        Create New User
+                    </button>
                 </ul>
             </div>
         </nav>
@@ -163,6 +166,105 @@
         <h1>Enroll in our various courses both in-person and online class from anywhere in the world.</h1>
         <a href="Contact.html" class="hero-btn">CONTACT US</a>
     </section>
+
+    <section class="search-box">
+        <input type="text" id="search" placeholder="Search courses...">
+        <button onclick="searchCourses()">Search</button>
+    </section>
+    
+    <!-- Create User Section -->
+    <section id="create-user" class="user-creation">
+        <h2>Create a New User</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button id="createUserBtn" onclick="createUser()">Create User</button>
+        <p id="statusMessage"></p>
+    </section>
+
+    <script>
+    async function createUser() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        // Validate fields are not empty
+        if (!name || !email || !password) {
+            document.getElementById('statusMessage').innerText = 'All fields are required!';
+            return;
+        }
+
+        const userData = {
+            name: name,
+            email: email,
+            password: password,
+            role: 'student'
+        };
+
+        try {
+            const createUserBtn = document.getElementById('createUserBtn');
+            createUserBtn.disabled = true;  // Disable the button during the request
+            document.getElementById('statusMessage').innerText = 'Creating user...';
+
+            const response = await fetch('http://localhost:5500/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            console.log('User created:', data);
+            document.getElementById('statusMessage').innerText = 'User created successfully!';
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+
+        } catch (error) {
+            console.error('Error creating user:', error);
+            document.getElementById('statusMessage').innerText = 'Error creating user. Please try again.';
+        } finally {
+            document.getElementById('createUserBtn').disabled = false;  // Re-enable the button
+        }
+    }
+
+    async function getAllUsers() {
+        try {
+            const response = await fetch('http://localhost:5500/api/users');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const users = await response.json();
+            console.log('Users:', users);
+            // Update the UI to display users
+
+        } catch (error) {
+            console.error('Error fetching users:', error);
+            // Notify the user of the error
+        }
+    }
+
+    // Call getAllUsers on page load
+    window.onload = getAllUsers;
+    </script>
+
+<script>
+    function scrollToCreateUser() {
+        // Select the "Create User" section and scroll to it smoothly
+        const createUserSection = document.getElementById('create-user');
+        createUserSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+</script>
+
     <section class="footer">
         <h4>About Us</h4>
         <p>Willow Academy is an award-winning instution with high-profile lecturers and we offer first-hand education. Visit us to learn more.</p>
@@ -172,5 +274,6 @@
             <i class="fa fa-instagram"></i>
         </div>
     </section>
+
 </body>
 </html>
