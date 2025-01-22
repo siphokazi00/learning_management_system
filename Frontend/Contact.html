@@ -35,6 +35,17 @@
         <h1>Contact Us</h1>
     </section>
     <!-- contact form-->
+    <h3>Join our institution</h3>
+   
+    <section id="create-user" class="user-creation">
+        <h2>Create a New User</h2>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button id="createUserBtn" onclick="createUser()">Create User</button>
+        <p id="statusMessage"></p>
+    </section>
+
     <section>
         <form action="submit.php" method="post">
             <label for="name">Name:</label>
@@ -55,6 +66,7 @@
     <!---My Footer--->
 
     <section class="footer">
+        <div class="footer-div">
         <h4>About Us</h4>
         <p>Willow University is an award Winning University with high Profile Professors and <br> lecturers, we offer first hand Education , visit us and learn more.</p>
         <div class="icons">
@@ -64,7 +76,10 @@
             <i class="fa fa-linkedin"></i>
         </div>
         <p>© 2024 Willow Academy. All Rights Reserved</p>
+        </div>
     </section>
+
+    
 
 
 
