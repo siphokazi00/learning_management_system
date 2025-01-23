@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
-
-
+    <link rel="icon" type="image/png" href="favion.png">
     <title>Willow Academy</title>
 </head>
 
@@ -30,16 +29,16 @@
                 </ul>
             </div>
 
-            <!-- <i class="fa fa-bars" onclick="hideMenu()"></i> -->
+            <i class="fa fa-bars" onclick="hideMenu()"></i>
         </nav>
         <h1>Contact Us</h1>
     </section>
     <!-- contact form-->
     <h3>Join our institution</h3>
-   
+
     <section id="create-user" class="user-creation">
         <h2>Create a New User</h2>
-        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="username" placeholder="Name" required>
         <input type="email" id="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password" required>
         <button id="createUserBtn" onclick="createUser()">Create User</button>
@@ -54,8 +53,8 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="Matric number">Matric No:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="matric-number">Matric No:</label>
+            <input type="text" id="matric-number" name="matric-number" required>
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
@@ -67,27 +66,21 @@
 
     <section class="footer">
         <div class="footer-div">
-        <h4>About Us</h4>
-        <p>Willow University is an award Winning University with high Profile Professors and <br> lecturers, we offer first hand Education , visit us and learn more.</p>
-        <div class="icons">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-linkedin"></i>
-        </div>
-        <p>© 2024 Willow Academy. All Rights Reserved</p>
+            <h4>About Us</h4>
+            <p>Willow University is an award Winning University with high Profile Professors and <br> lecturers, we offer first hand Education , visit us and learn more.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <p>&copy; 2024 Willow Academy. All Rights Reserved</p>
         </div>
     </section>
 
-    
-
-
-
-
     <!----javascript for toggle menu---->
     <script>
-      var navLinks = document.querySelector('.nav-links');
-
+        var navLinks = document.querySelector('.nav-links');
 
         function showMenu() {
             navLinks.style.right = "0 ";
@@ -95,6 +88,23 @@
 
         function hideMenu() {
             navLinks.style.right = "-200px ";
+        }
+    </script>
+    <script>
+        function createUser() {
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (username && email && password) {
+                var statusMessage = document.getElementById("statusMessage");
+                statusMessage.style.color = "green";
+                statusMessage.innerText = "User created successfully!";
+            } else {
+                var statusMessage = document.getElementById("statusMessage");
+                statusMessage.style.color = "red";
+                statusMessage.innerText = "Please fill all fields!";
+            }
         }
     </script>
 </body>

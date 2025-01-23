@@ -6,10 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Users</title>
     <link rel="stylesheet" href="css/upgc.css">
+    <link rel="icon" type="image/png" href="favion.png">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
+    <nav class="nav-bar">
         <h2>Willow Academy - Users</h2>
         <ul>
             <li><a href="Frontend/index.html">Home</a></li>
@@ -17,6 +35,7 @@
             <li><a href="payments.html">Payments</a></li>
             <li><a href="grades.html">Grades</a></li>
             <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="events.html">Events</a></li>
         </ul>
     </nav>
     <h1>Users List</h1>
@@ -34,30 +53,40 @@
                 <tr>
                     <td>20240001</td>
                     <td>Adeleke</td>
-                    <td>adelekeabdulmalik02@gmail.com</td>
+                    <td>adefash@example.com</td>
                     <td>student</td>
                 </tr>
                 <tr>
-                    <td>20240001</td>
-                    <td>Adeleke</td>
-                    <td>adelekeabdulmalik02@gmail.com</td>
+                    <td>20240002</td>
+                    <td>Somia</td>
+                    <td>somia@example.com</td>
                     <td>student</td>
                 </tr>
                 <tr>
-                    <td>20240001</td>
-                    <td>Adeleke</td>
-                    <td>adelekeabdulmalik02@gmail.com</td>
+                    <td>20240003</td>
+                    <td>Santa</td>
+                    <td>santa@example.com</td>
                     <td>student</td>
                 </tr>
                 <tr>
-                    <td>20240001</td>
-                    <td>Adeleke</td>
-                    <td>adelekeabdulmalik02@gmail.com</td>
+                    <td>20240004</td>
+                    <td>Sipho</td>
+                    <td>sipho@example.com</td>
                     <td>student</td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <script>
+        // Add event listener to table rows
+        const tableRows = document.querySelectorAll('#userList tr');
+        tableRows.forEach(row => {
+            row.addEventListener('click', () => {
+                // Add functionality here
+                console.log('Row clicked');
+            });
+        });
+    </script>
 </body>
 
 </html>

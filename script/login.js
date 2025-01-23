@@ -13,6 +13,19 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
         if (response.ok) {
             const data = await response.json();
+            localStorage.setItem('token', data.token); // Store the token
+            console.log('Token stored:', data.token); // Confirm token storage
+
+            // Retrieve user data
+            const userResponse = await fetch(`/api/users/${email}`, {
+                headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+            });
+
+            if (userResponse.ok) {
+                const userData = await userResponse.json();
+                console.log('User data:', userData); // Handle user data as needed
+            }
+
             alert('Login successful!');
             window.location.href = '/index.html'; // Redirect to the dashboard
         } else {
