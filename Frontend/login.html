@@ -5,17 +5,21 @@
     <!-- Point to the CSS file inside the 'css' folder -->
     <link rel="stylesheet" type="text/css" href="../css/LoginSignup.css">
     <title>Login - Willow Academy LMS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="login-box">
-        <img src="images/Black_Illustrated_School_Logo-removebg-preview.png" class="avatar">
+        <img src="images/Black_Illustrated_School_Logo-removebg-preview.png" class="avatar" alt="Willow Academy Logo">
         <h1>Login Here</h1>
-        <form id="loginForm">
+        <form id="loginForm" novalidate>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
+            <div class="error-message" id="email-error"></div>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
+            <div class="error-message" id="password-error"></div>
             <input type="submit" value="Login">
         </form>
         <p>Don't have an account? <a href="signup.html">Sign Up</a></p>

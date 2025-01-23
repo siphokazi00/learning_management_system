@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portal - Willow Academy</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em; /* Increased size */
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em; /* Increased size */
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .portal-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .portal-item {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .portal-item:hover {
+            transform: scale(1.05);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .home-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Portal</h1>
+    <p>Access the following sections:</p>
+    <div class="portal-links">
+        <div class="portal-item">
+            <h3>User Management</h3>
+            <p>Manage user accounts and roles.</p>
+            <a href="users.html" class="btn">Go to Users</a>
+        </div>
+        <div class="portal-item">
+            <h3>Payment Management</h3>
+            <p>Handle payment transactions and records.</p>
+            <a href="payments.html" class="btn">Go to Payments</a>
+        </div>
+        <div class="portal-item">
+            <h3>School Calendar</h3>
+            <p>View and manage the school calendar.</p>
+            <a href="calendar.html" class="btn">Go to Calendar</a>
+        </div>
+        <div class="portal-item">
+            <h3>Upcoming Events</h3>
+            <p>Check out the upcoming events.</p>
+            <a href="events.html" class="btn">Go to Events</a>
+        </div>
+        <div class="portal-item">
+            <h3>Grade Management</h3>
+            <p>Manage student grades and reports.</p>
+            <a href="grades.html" class="btn">Go to Grades</a>
+        </div>
+    </div>
+    <a href="index.html" class="home-link">Return to Home</a>
+</body>
+</html>

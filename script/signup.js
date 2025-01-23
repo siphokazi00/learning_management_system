@@ -13,8 +13,10 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         });
 
         if (response.ok) {
+            const data = await response.json();
+            localStorage.setItem('token', data.token); // Store the token if returned
             alert('Sign-up successful! Please log in.');
-            window.location.href = 'payments.html'; // Redirect to the login page
+            window.location.href = 'login.html'; // Redirect to the login page
         } else {
             const error = await response.json();
             alert(error.message || 'Sign-up failed. Please try again.');
