@@ -5,7 +5,7 @@ const pool = require('../config/db'); // Import the database pool
 exports.getAllUsers = async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM users');
-    res.status(200).json(result.rows);
+    res.status(200).json({ users: result.rows });
   } catch (err) {
     console.error('Error querying users:', err);
     res.status(500).json({ error: 'Database error' });

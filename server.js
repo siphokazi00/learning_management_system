@@ -27,8 +27,8 @@ app.use('/api/users', userRoutes); // Add user routes
 app.use('/api/auth', authRoutes); // Authentication routes
 app.use('/api/protected', protectedRoutes); // Protected routes
 
-// Middleware to serve static files from the 'Frontend' folder
-app.use(express.static(path.join(__dirname, 'Frontend')));
+app.use(express.static(path.join(__dirname, 'Frontend'))); // Serve static files from Frontend
+app.use(express.static(path.join(__dirname, 'Backend'))); // Serve static files from Backend
 
 // Route to serve the index.html file
 app.get('/', (req, res) => {
