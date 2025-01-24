@@ -524,7 +524,7 @@
     }
     
     .icons .fa {
-        color: #f44336;
+        color: #eb7269;
         margin: 0 10px;
         cursor: pointer;
         padding: 18px 0;
@@ -634,12 +634,16 @@
         border-radius: 10px;
     }
     .about-mission p {
-        margin: 20px auto;
+        margin: 0 auto;
         padding: 15px;
         font-size: 16px;
-        line-height: 1.8;
+        line-height: 1.6;
         text-align: justify;
-        border-radius: 8px;
+        border-radius: 5px;
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+
     }
     .our-unique {
         text-align: center;
