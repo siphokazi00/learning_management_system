@@ -6,4 +6,3 @@ CREATE TABLE users (
   role VARCHAR(50) NOT NULL DEFAULT 'student',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
