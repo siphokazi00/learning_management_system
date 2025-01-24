@@ -524,7 +524,7 @@
     }
     
     .icons .fa {
-        color: #f44336;
+        color: #eb7269;
         margin: 0 10px;
         cursor: pointer;
         padding: 18px 0;
@@ -634,12 +634,16 @@
         border-radius: 10px;
     }
     .about-mission p {
-        margin: 20px auto;
+        margin: 0 auto;
         padding: 15px;
         font-size: 16px;
-        line-height: 1.8;
+        line-height: 1.6;
         text-align: justify;
-        border-radius: 8px;
+        border-radius: 5px;
+        width: 80%;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+
     }
     .our-unique {
         text-align: center;
@@ -944,4 +948,13 @@ html {
 
 .create-user-btn:active {
     background-color: #004085;
+}
+.login-box {
+    text-align: center;
+    background-color: #4CAF50;
+    width: 400px;
+    background: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 0 20px 0 rgba(109, 35, 35, 0.2);
 }
