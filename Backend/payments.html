@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payments</title>
+    <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" href="css/upgc.css">
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -32,7 +33,7 @@
             <div class="form">
                 <div class="card space icon-relative">
                     <label class="label">Card holder:</label>
-                    <input type="text" class="input" placeholder="Payment description">
+                    <input type="text" class="input" placeholder="Card holder name">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="card space icon-relative">
@@ -64,6 +65,45 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="payments.js"></script>
+
+<script>
+  const stripe = Stripe("pk_test_51Qkr6JACOFW2zFBsKQTxkNdQA74OYOkF72DFL6Wi77xcW2KJXOogYjLfNlX26muGofQ3cDNCgDzauNlKeE4XlFLr00UIaYOW2K"); // Replace with your test key
+  const form = document.getElementById("payment-form");
+
+  fetch("http://localhost:5500/api/pay", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ amount: 5000, currency: "cnd" }),
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      const clientSecret = data.clientSecret;
+
+      const elements = stripe.elements();
+      const cardElement = elements.create("card");
+      cardElement.mount("#card-element");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const { paymentIntent, error } = await stripe.confirmCardPayment(
+          clientSecret,
+          {
+            payment_method: {
+              card: cardElement,
+            },
+          }
+        );
+
+        if (error) {
+          document.getElementById("payment-message").textContent = error.message;
+        } else {
+          document.getElementById("payment-message").textContent =
+            "Payment Successful!";
+        }
+      });
+    });
+</script>
 </body>
 
 </html>
