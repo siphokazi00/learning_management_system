@@ -8,7 +8,8 @@
     "express-validator": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
     "learning_management_system": "file:",
-    "pg": "^8.13.1"
+    "pg": "^8.13.1",
+    "stripe": "^17.5.0"
   },
   "name": "learning_management_system",
   "version": "1.0.0",

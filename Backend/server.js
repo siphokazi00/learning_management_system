@@ -1,12 +1,12 @@
 require('dotenv').config(); // Load environment variables from a .env
-const UserModel = require('./Backend/models/userModel');
+const UserModel = require('./models/userModel');
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const bodyParser = require('body-parser');
-const userRoutes = require('./Backend/routes/userRoutes');
-const authRoutes = require('./Backend/routes/authRoutes'); // Import the authentication routes
-const protectedRoutes = require('./Backend/routes/protectedRoutes'); // Import protected routes
+const userRoutes = require('./routes/userRoutes');
+const authRoutes = require('./routes/authRoutes'); // Import the authentication routes
+const protectedRoutes = require('./routes/protectedRoutes'); // Import protected routes
 
 const app = express(); // Initialize the Express app
 
@@ -47,7 +47,7 @@ if (require.main === module) {
 }
 
 // Log environment and database connection
-const pool = require('./config/db');
+const pool = require('../config/db');
 
 pool.query('SELECT * FROM users', (err, res) => {
     if (err) {

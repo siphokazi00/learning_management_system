@@ -4,7 +4,10 @@ const AuthController = require('../controllers/authController');
 const authMiddleware = require('../middlewares/authMiddleware');
 const router = express.Router();
 
-// Logout endpoint
+const paymentController = require('../controllers/paymentController'); // Import the payment controller
+
+// Payment endpoint
+router.post('/payment', paymentController.processPayment); // Process payment
 router.post('/logout', authMiddleware, AuthController.logout);
 
 // Register endpoint
