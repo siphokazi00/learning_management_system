@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General Body Styling */
+        
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
             margin: 0;
             padding: 0;
         }
-
         /* Navigation Bar Styling */
+        
         .nav-bar {
             background-color: #343a40;
             color: white;
@@ -24,35 +26,35 @@
             align-items: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
+        
         .nav-bar h2 {
             margin: 0;
             font-size: 20px;
         }
-
+        
         .nav-bar ul {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
         }
-
+        
         .nav-bar ul li {
             margin: 0 10px;
         }
-
+        
         .nav-bar ul li a {
             text-decoration: none;
             color: white;
             font-size: 16px;
             transition: color 0.3s ease;
         }
-
+        
         .nav-bar ul li a:hover {
             color: #17a2b8;
         }
-
         /* Payment Box Styling */
+        
         .payment-box {
             max-width: 650px;
             margin: 50px auto;
@@ -61,25 +63,25 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-
+        
         .payment-box h1 {
             text-align: center;
             color: #333;
             font-size: 24px;
             margin-bottom: 20px;
         }
-
+        
         .form {
             display: flex;
             flex-direction: column;
         }
-
+        
         .form .label {
             font-size: 14px;
             color: #555;
             margin-bottom: 5px;
         }
-
+        
         .form input[type="text"] {
             width: 100%;
             padding: 10px;
@@ -88,7 +90,7 @@
             border-radius: 5px;
             font-size: 14px;
         }
-
+        
         .form button {
             width: 100%;
             padding: 12px;
@@ -101,46 +103,41 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
+        
         .form button:hover {
             background-color: #0056b3;
         }
-
         /* Card Group Styling */
+        
         .card-grp {
             display: flex;
             gap: 10px;
         }
-
+        
         .card-item {
             flex: 1;
         }
-
         /* Responsive Design */
+        
         @media (max-width: 768px) {
             .nav-bar {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
             .nav-bar ul {
                 flex-wrap: wrap;
             }
-
             .card-grp {
                 flex-direction: column;
             }
-
             .status-paid {
                 color: green;
                 font-weight: bold;
             }
-
             .status-unpaid {
                 color: red;
                 font-weight: bold;
             }
-
             .btn {
                 padding: 5px 10px;
                 background-color: #007bff;
@@ -149,31 +146,29 @@
                 border-radius: 4px;
                 cursor: pointer;
             }
-
             .btn:hover {
                 background-color: #0056b3;
             }
-
             .error-message {
                 text-align: center;
                 color: red;
                 font-weight: bold;
             }
-
-                    }
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <div class="nav-bar">
         <h2>Willow Academy - Payments</h2>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="users.html">Users</a></li>
+            <li><a href="../Frontend/index.html">Home</a></li>
+            <li><a href="../Frontend/user.html">Users</a></li>
             <li><a href="payments.html">Payments</a></li>
-            <li><a href="grades.html">Grades</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><a href="../Frontend/grades.html">Grades</a></li>
+            <li><a href="../Frontend/calendar.html">Calendar</a></li>
+            <li><a href="../Frontend/events.html">Events</a></li>
         </ul>
     </div>
 
@@ -209,4 +204,5 @@
     <script src="https://js.stripe.com/v3/"></script>
     <script src="../script/payment.js"></script>
 </body>
+
 </html>
